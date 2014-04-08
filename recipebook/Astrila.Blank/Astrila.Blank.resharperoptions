@@ -1,0 +1,380 @@
+<Configuration>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:string">
+      <Item value="Trim" priority="1" />
+      <Item value="Substring" priority="1" />
+      <Item value="Length" priority="3" />
+      <Item value="StartsWith" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Image">
+      <Item value="Dispose" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Menu.MenuItemCollection">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Office.Interop.Outlook">
+      <Item value="_Application" priority="0" />
+      <Item value="MAPIFolder" priority="0" />
+      <Item value="OlDefaultFolders" priority="0" />
+      <Item value="OlItemType" priority="1" />
+      <Item value="Application" priority="0" />
+      <Item value="NameSpace" priority="0" />
+      <Item value="MailItem" priority="0" />
+      <Item value="Explorer" priority="0" />
+      <Item value="OlDisplayType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Common.DictionaryList">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Office.Interop.Outlook.OlDefaultFolders">
+      <Item value="olFolderInbox" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem.ListViewSubItemCollection">
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.SyncServerWebService.BlankWebService">
+      <Item value="Url" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.SyncServerWebService.PostResult">
+      <Item value="SendMoreItemsUpdatedAfter" priority="0" />
+      <Item value="TotalItemsUpdated" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRow[]">
+      <Item value="Length" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.MailItem">
+      <Item value="Attachments" priority="0" />
+      <Item value="Display" priority="0" />
+      <Item value="Save" priority="0" />
+      <Item value="Subject" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Office">
+      <Item value="Interop" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="UserDomainName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolBarButton">
+      <Item value="Pushed" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.BlankServer.BlankWebService.PostResult">
+      <Item value="TotalItemsExamined" priority="0" />
+      <Item value="SetTotalItemsUpdated" priority="0" />
+      <Item value="SendMoreItemsUpdatedAfter" priority="0" />
+      <Item value="SetSendMoreItemsUpdatedAfter" priority="0" />
+      <Item value="TotalItemsUpdated" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="Write" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItemProperty">
+      <Item value="Contains" priority="0" />
+      <Item value="Value" priority="2" />
+      <Item value="RollbackChanges" priority="0" />
+      <Item value="IsInConflict" priority="1" />
+      <Item value="CurrentValueAuthor" priority="0" />
+      <Item value="Document" priority="2" />
+      <Item value="Name" priority="2" />
+      <Item value="MyValue" priority="0" />
+      <Item value="Values" priority="2" />
+      <Item value="MyValueExist" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ContextMenu">
+      <Item value="MenuItems" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataDocument">
+      <Item value="CurrentAuthor" priority="10" />
+      <Item value="Refresh" priority="0" />
+      <Item value="CurrentEditor" priority="0" />
+      <Item value="Items" priority="1" />
+      <Item value="GlobalGuid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.NameSpace">
+      <Item value="Application" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItemPropertyValueCollection">
+      <Item value="Dirty" priority="0" />
+      <Item value="Count" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Astrila">
+      <Item value="Common" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Enabled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.MailItemClass">
+      <Item value="Attachments" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Font">
+      <Item value="Clone" priority="0" />
+      <Item value="Style" priority="0" />
+      <Item value="Strikeout" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.Items">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="Columns" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:bool">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.DssRemotingServer">
+      <Item value="RequestClientUIRefresh" priority="0" />
+      <Item value="PostFeed" priority="0" />
+      <Item value="GetFeed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolTip">
+      <Item value="SetToolTip" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNode">
+      <Item value="AppendChild" priority="0" />
+      <Item value="Attributes" priority="2" />
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="AddRange" priority="0" />
+      <Item value="Add" priority="0" />
+      <Item value="Count" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList">
+      <Item value="Images" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.MAPIFolder">
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItemPropertyCollection">
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
+      <Item value="SubItems" priority="1" />
+      <Item value="ImageIndex" priority="0" />
+      <Item value="Tag" priority="1" />
+      <Item value="Font" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="MaxValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.SubscriptionCollection.FeedInfo[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.StatusBarPanel">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItemCollection">
+      <Item value="RebuildDictionary" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel">
+      <Item value="StopListening" priority="0" />
+      <Item value="GetChannelUri" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.SubscriptionCollection">
+      <Item value="GetFeedInfo" priority="1" />
+      <Item value="Save" priority="0" />
+      <Item value="Add" priority="0" />
+      <Item value="Remove" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataColumnCollection">
+      <Item value="Contains" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTableCollection">
+      <Item value="Contains" priority="0" />
+      <Item value="Remove" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.DictionaryEntry">
+      <Item value="Key" priority="1" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView.ListViewItemCollection">
+      <Item value="Clear" priority="1" />
+      <Item value="Add" priority="1" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SaveFileDialog">
+      <Item value="FileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="GetType" priority="0" />
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime.Now">
+      <Item value="ToLongDateString" priority="0" />
+      <Item value="ToString" priority="0" />
+      <Item value="ToShortTimeString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToLocalTime" priority="0" />
+      <Item value="ToShortDateString" priority="2" />
+      <Item value="ToShortTimeString" priority="1" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="Load" priority="1" />
+      <Item value="CreateElement" priority="0" />
+      <Item value="LoadXml" priority="2" />
+      <Item value="SelectNodes" priority="0" />
+      <Item value="SelectSingleNode" priority="3" />
+      <Item value="Save" priority="2" />
+      <Item value="OuterXml" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
+      <Item value="ShowDialog" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Form.DialogResult">
+      <Item value="Abort" priority="0" />
+      <Item value="Retry" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItem">
+      <Item value="InConflict" priority="0" />
+      <Item value="Deleted" priority="1" />
+      <Item value="Document" priority="0" />
+      <Item value="Properties" priority="2" />
+      <Item value="IsInConflict" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="AppendChild" priority="0" />
+      <Item value="SetEditing" priority="0" />
+      <Item value="Table" priority="0" />
+      <Item value="RollbackChanges" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="ShowDialog" priority="0" />
+      <Item value="InnerXml" priority="0" />
+      <Item value="CustomFormInitializations" priority="0" />
+      <Item value="_subscriptions" priority="0" />
+      <Item value="CurrentValue" priority="0" />
+      <Item value="SelectedAuthor" priority="0" />
+      <Item value="Save" priority="0" />
+      <Item value="ToString" priority="1" />
+      <Item value="Values" priority="0" />
+      <Item value="ResolveConflict" priority="0" />
+      <Item value="CreateElement" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowCollection">
+      <Item value="Find" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="SelectedItems" priority="2" />
+      <Item value="Items" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRow">
+      <Item value="RowState" priority="5" />
+      <Item value="RejectChanges" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Remoting.Channels.Tcp.TcpChannel">
+      <Item value="ChannelName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataSet">
+      <Item value="Tables" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView.SelectedListViewItemCollection">
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:int">
+      <Item value="ToString" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:object">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Office.Interop">
+      <Item value="Outlook" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.SubscriptionCollection.FeedInfo">
+      <Item value="Url" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.Application">
+      <Item value="ActiveExplorer" priority="0" />
+      <Item value="CreateItem" priority="0" />
+      <Item value="Session" priority="0" />
+      <Item value="Explorers" priority="0" />
+      <Item value="Quit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms">
+      <Item value="PictureBox" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlNodeList">
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItemPropertyValue">
+      <Item value="Deleted" priority="0" />
+      <Item value="LastConflictResolutionOn" priority="0" />
+      <Item value="Author" priority="4" />
+      <Item value="ChangedOn" priority="1" />
+      <Item value="Revision" priority="0" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="Abort" priority="0" />
+      <Item value="Yes" priority="2" />
+      <Item value="Retry" priority="0" />
+      <Item value="OK" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Astrila.Common">
+      <Item value="DataAccess" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Office.Interop.Outlook.Attachments">
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MenuItem">
+      <Item value="Checked" priority="0" />
+      <Item value="Enabled" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Office.Interop.Outlook.OlItemType">
+      <Item value="olMailItem" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolBarButtonClickEventArgs">
+      <Item value="Button" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Hashtable">
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control">
+      <Item value="GetType" priority="1" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.Clients.RecipeBook.ConflictIndicator">
+      <Item value="RefreshIndication" priority="0" />
+      <Item value="ItemProperty" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\Sample.xml" offset="1538" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataItemProperty.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataItemCollection.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\default.htm" offset="691" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataItemPropertyValue.cs" offset="0" line="75" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataAccess.cs" offset="0" line="97" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\SubscriptionCollection.cs" offset="0" line="85" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\SyncEngine.cs" offset="0" line="112" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\FeedWriter.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\RecipeBrowserForm.cs" offset="0" line="282" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\bin\Debug\subscriptions.xml" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\subscriptions.xml" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\RecipeEditorForm.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\SubscriptionsManagerForm.cs" offset="0" line="101" column="63" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\App.config" offset="332" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataItemPropertyValueCollection.cs" offset="0" line="-1" column="-1" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\BlankWebService.asmx.cs" offset="1337" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\feed.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataDocument.cs" offset="5320" line="87" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataDocumentCollection.cs" offset="1140" line="12" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\InputBox.cs" offset="196" line="160" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\CommonFunctions.cs" offset="237" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\About.cs" offset="829" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+</Configuration>

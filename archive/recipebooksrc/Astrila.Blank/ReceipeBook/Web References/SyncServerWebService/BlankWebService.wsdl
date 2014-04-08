@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PostFeed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="feedDocument">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostFeedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PostFeedResult" type="tns:PostResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PostResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SendMoreItemsUpdatedAfter" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalItemsUpdated" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalItemsExamined" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PostFeedSoapIn">
+    <wsdl:part name="parameters" element="tns:PostFeed" />
+  </wsdl:message>
+  <wsdl:message name="PostFeedSoapOut">
+    <wsdl:part name="parameters" element="tns:PostFeedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BlankWebServiceSoap">
+    <wsdl:operation name="PostFeed">
+      <wsdl:input message="tns:PostFeedSoapIn" />
+      <wsdl:output message="tns:PostFeedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BlankWebServiceSoap" type="tns:BlankWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="PostFeed">
+      <soap:operation soapAction="http://tempuri.org/PostFeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BlankWebService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="BlankWebServiceSoap" binding="tns:BlankWebServiceSoap">
+      <soap:address location="http://localhost/BlankServer/BlankWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

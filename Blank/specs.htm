@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>DSS 0.8 Specification</title></head>
+	<body>
+		<h1>DSS Specifications 0.7</h1>
+		<P>&nbsp;</P>
+		<h2>What is DSS</h2>
+		<p>DSS is a format to share <EM>data</EM> on web. It allows you to publish&nbsp;the 
+			data as a XML&nbsp;feed, subscribe to someone else's data feed, post 
+			back&nbsp;your modifications and handle the conflicts.</p>
+		<P>The term DSS is an&nbsp;acronym for Data Syndication Services.</P>
+		<h2>Sample feed</h2>
+		<p>You can <A href="http://www.shitalshah.com/dss/BlankServer/feed.ashx">view the 
+				sample DSS feed here</A>.
+		</p>
+		<h2>Description</h2>
+		<P>The DSS format is extremely easy to use. The typical data sharing scenario where 
+			DSS format can be useful is described like this: Let's say, you have a website 
+			where users contribute to cooking receipes. Using DSS, it is immediately 
+			possible to publish new receipes and updates as a feed which users can consume. 
+			Typically DSS feed would be consumed by applications such as desktop recipe 
+			manager which supports DSS.
+		</P>
+		<P>Now users of this website may also want make maodifications to the receipes they 
+			recieved as they experiemnt with them. They would also like to send back these 
+			modifications to the website, again&nbsp;as a DSS feed &nbsp;interfaces such as 
+			Web Service or XML-RPC. The website then&nbsp;distributes modifications out to 
+			all other users. However, instead of overwritting other users data, the 
+			modifications show up as &nbsp;a&nbsp;<EM>conflict</EM>&nbsp; on a data item. 
+			Other users with higher permissions such as web masters can resolve these 
+			conflicts and accept or reject the modification or even just let the conflict 
+			be there forever for other users to see and experiment. This&nbsp;example just 
+			highlights the possibility of immense collaboration that DSS may make possible.</P>
+		<h2>The Real World</h2>
+		<p>DSS aims to solve real world problems instead of being an abstract theoratical 
+			specifications. To that end, DSS includes few technology specific 
+			recommandations that lets it to be usable out of the box.</p>
+		<h3>Pagged Feeds</h3>
+		The typical real world databases used in businesses can have millions of 
+		records and using DSS XML feed to expose these number of records at once can be 
+		impractical without using <i>pagged feeds</i>. The DSS specifications 
+		recommands that all DSS feeds exposed through URL return only limited number of 
+		records that had been most recently modified when no query parameter called <i>after</i>
+		is specified. When a query parameter called <i>after</i> is specified only 
+		records that had been modified after the specified date is returned. This way, 
+		while reading the feed an endpoint can request records in a chunks of feed 
+		pages.
+		<h3>Reference Application And API Library</h3>
+		<p></p>
+		<P>As a step to be in-sync with the real world application, DSS specification is 
+			released with fully functional end-to-end application.</P>
+		<P><A href="http://www.shitalshah.com/dss/recipebook.zip">The reference application</A>&nbsp;[<A href="http://www.shitalshah.com/dss/recipebooksrc.zip">source</A>] 
+			is a&nbsp;recipe manager&nbsp;that would allow you to&nbsp;manage your cooking 
+			recipes. You can subscribe to feeds to recieve new recipes from a website. Once 
+			you download the new recipes through DSS feed, you can view <EM>and</EM> modify 
+			those recipes. After you are done, you can send your updates back to the 
+			publisher (in this case a web server).
+		</P>
+		<P>Your updates then would propogate to other subscribers of the feed.&nbsp;Users 
+			can see&nbsp;values entered by&nbsp;other users and may&nbsp;resolve the 
+			conflict&nbsp;if they&nbsp;wish.</P>
+		<P>The entire functionality of processing DSS feed including Sync engine is 
+			encapsulated in a .Net library (Java package comming soon) giving you a 
+			standard set of API to work with DSS and synchronization.
+		</P>
+		<H2>DSS Schema Description</H2>
+		<P>Following is the brief description of each element and attribute for DSS 
+			element. It is highly recommanded that you <A href="http://www.shitalshah.com/dss/BlankServer/feed.ashx">
+				view the sample DSS feed</A>&nbsp;as many elements are self-explanatory.</P>
+		<P>&nbsp;</P>
+		<h3>&lt;dss&gt; element</h3>
+		<p>The DSS document starts with root element &lt;dss&gt;.&nbsp; The &lt;dss&gt; 
+			element can have an optional attribute called version which has default value 
+			0.7.
+		</p>
+		<p>&nbsp;</p>
+		<h3>&lt;dataset&gt; element</h3>
+		<p>This is an optional sub-element&nbsp; of &lt;dss&gt;.</p>
+		<p>The &lt;dataset&gt; element roughly corresponds to a physical database instance.</p>
+		<P>In a feed, for instance, one &lt;dataset&gt; element may contain data about 
+			recipes, while another &lt;dataset&gt; element may contain data about concert 
+			dates in New York. Typically only one &lt;dataset&gt; element is recommanded 
+			within &lt;dss&gt; element.</P>
+		<p></p>
+		<h4>Optional attributes</h4>
+		<p>
+			<table>
+				<tr>
+					<td><strong>Attribute&nbsp;</strong></td>
+					<td><strong>Description</strong></td>
+					<td><strong>Example</strong></td>
+				</tr>
+				<tr>
+					<td>globalGuid</td>
+					<td>Uniquely and globally identifies this dataset. An application may, for 
+						instance, use this value to figure out where it should put data in this dataset 
+						each time it reads the feed. It is recommanded that this value is globally 
+						unique URI through the life time of the feed.</td>
+					<td>DailyCooking.com/Recipes</td>
+				</tr>
+				<tr>
+					<td>title</td>
+					<td>User friendly title for this dataset.</td>
+					<td>Recipe Updates From DailyCooking!</td>
+				</tr>
+				<tr>
+					<td>endpointGuid</td>
+					<td>Identifies the endpoint which is publishing this feed. Typically this value may 
+						be used to figure out when was the last time feed was read from this endpoint. 
+						If the endpoint supports pagged feed (an ability to read the feed in chunks of 
+						items) then this value may be used to figure out when to stop requesting more 
+						pages.</td>
+					<td>http://www.DailyCooking.com/schemas/recipefeed</td>
+				</tr>
+				<tr>
+					<td>itemSchema</td>
+					<td>Identifies the logical application schema for this dataset; this is not the 
+						schema for XML markup. This can be any string value that publisher or 
+						subscriber may mutually agree to, including an URI.</td>
+					<td>http://www.DailyCooking.com/schemas/recipefeed</td>
+				</tr>
+				<tr>
+					<td>since</td>
+					<td>All items in this feed have been updated on or after this date-time value. If 
+						publisher supports feed pages, the subscriber may use this value to request 
+						next feed page.</td>
+					<td>2005-12-06T11:41:41.4460000-08:00</td>
+				</tr>
+				<tr>
+					<td>until</td>
+					<td>All items in this feed have been updated on or before this date-time value.</td>
+					<td>2005-12-06T11:41:41.4560000-08:00</td>
+				</tr>
+			</table>
+		</p>
+		<h3>&nbsp;</h3>
+		<h3>&lt;item&gt; element</h3>
+		<p>This is an optional sub-element&nbsp; of &lt;dataset&gt;.</p>
+		<p>Each item element corresponds to an instance of some entity. For example, in the 
+			recipe feed there would be one &lt;item&gt; element for each receipe.</p>
+		<p>In relational database world, the &lt;item&gt; element roughly corresponds to a 
+			row in a table.</p>
+		<p></p>
+		<h4>Optional attributes</h4>
+		<p>
+			<table>
+				<tr>
+					<td><strong>Attribute&nbsp;</strong></td>
+					<td><strong>Description</strong></td>
+					<td><strong>Example</strong></td>
+				</tr>
+				<tr>
+					<td>guid</td>
+					<td>Uniquely identifies this item among all existing items in the dataset.</td>
+					<td>80eee2dc-c29c-41aa-814f-dbb0e79d9062</td>
+				</tr>
+				<tr>
+					<td>type</td>
+					<td>It's the user defined value that may identify the type of data that this item 
+						contains. An application may use this value along with itemSchema attribute of 
+						&lt;dataset&gt; element to learn more about type of data that this item 
+						contains. In relational database world, it may roughly corresponds to the table 
+						name in a database.</td>
+					<td>Recipe</td>
+				</tr>
+				<tr>
+					<td>when</td>
+					<td>Time stamp indicating when was the last time this item was updated. In DSS 
+						feed, typically, items are sequenced in descending order of modification time 
+						(i.e. newest items first).</td>
+					<td>Recipe</td>
+				</tr>
+			</table>
+		</p>
+		<h3>&nbsp;</h3>
+		<h3>&lt;property&gt; sub-element of &lt;item&gt;</h3>
+		<p>Each property element contains value for certain aspect of an item. For example, 
+			the item for a Chicken Tikka Masal recipe could have properties such as Title, 
+			Ingredients, CookingSteps and CookingTime and so on.</p>
+		<p>In relational database world, the &lt;property&gt; element roughly corresponds 
+			to a column in a table.</p>
+		<p></p>
+		<h4>Optional attributes</h4>
+		<p>
+			<table>
+				<tr>
+					<td><strong>Attribute&nbsp;</strong></td>
+					<td><strong>Description</strong></td>
+					<td><strong>Example</strong></td>
+				</tr>
+				<tr>
+					<td>name</td>
+					<td>Uniquely identifies this property in an item.</td>
+					<td>Ingredients</td>
+				</tr>
+				<tr>
+					<td>currentValueBy</td>
+					<td>A property may contain values authored by different authors. For example, lets 
+						say the recipe for Hasparats has a property called Ingredients. Now Dave and 
+						Leslie can each author their own value for Ingredients. The DSS allows to 
+						retain both of their values without overwriting each other. The currentValueBy 
+						attribute specifies whoes value is considered as currently agreed upon while 
+						the conflict is still being resolved. The user interface elements such as 
+						textbox can show only one value. The currentValueBy attribute dectates whoes 
+						value to show when a property is in conflict by multiple authors.</td>
+					<td>dave@example.com</td>
+				</tr>
+				<tr>
+					<td>by</td>
+					<td>Author who last changed the currentValueBy attribute.</td>
+					<td>dave@example.com</td>
+				</tr>
+				<tr>
+					<td>when</td>
+					<td>The date-time when the currentValueBy attribute was last changed</td>
+					<td>2005-12-06T11:41:41.4560000-08:00</td>
+				</tr>
+				<tr>
+					<td>revision</td>
+					<td>Each time currentValueBy changes, the value for this attribute is incremented.</td>
+					<td>12</td>
+				</tr>
+			</table>
+		</p>
+		<p>&nbsp;</p>
+		<h3>&lt;value&gt; sub-element of &lt;property&gt;</h3>
+		<p>Each property can have a value. But when multiple users author set their own 
+			value, there would be one &lt;value&gt; element per author.</p>
+		<p>For example, the property named CookingTime may contain one &lt;value&gt; 
+			element for the author Dave with the value 12 minutes and another &lt;value&gt; 
+			element for Leslie set to 20 minutes.</p>
+		<p>In relational database world, the &lt;value&gt; element roughly corresponds to a 
+			value in a perticular row and column of a table, except that in relational 
+			databases, only one value exist for (row,column) combination while DSS retains 
+			value authored by each author for that (row,column).</p>
+		<p></p>
+		<h4>Optional attributes</h4>
+		<p>
+			<table>
+				<tr>
+					<td><strong>Attribute&nbsp;</strong></td>
+					<td><strong>Description</strong></td>
+					<td><strong>Example</strong></td>
+				</tr>
+				<tr>
+					<td>deleted</td>
+					<td>true if this value has been deleted by its author. Note that, the &lt;value&gt; 
+						element itself is never removed even though the value has been deleted. The 
+						default value is false.</td>
+					<td>false</td>
+				</tr>
+				<tr>
+					<td>by</td>
+					<td>Author to whom this &lt;value&gt; element belong to.</td>
+					<td>dave@example.com</td>
+				</tr>
+				<tr>
+					<td>
+						when</td>
+					<td>
+						The date-time when the value was last changed</td>
+					<td>
+						2005-12-06T11:41:41.4560000-08:00</td>
+				</tr>
+				<tr>
+					<td height="4">
+						revision</td>
+					<td height="4">
+						Each time authors changes their value, this attribute is incremented by one.</td>
+					<td height="4">
+						5</td>
+				</tr>
+				<tr>
+					<td>
+						resolvedWhen</td>
+					<td>
+						A date-time value indicating when was the last time the author of this value 
+						performed the conflict resolution</td>
+					<td>
+						2005-10-06T11:41:41.4560000-08:00</td>
+				</tr>
+				<tr>
+					<td>
+						resolvedReason</td>
+					<td>
+						If authors specified any reasoning when they performed the conflict resolution, 
+						this attribute contains that value.</td>
+					<td>
+						I checked it, 12 minutes is the correct cooking time!</td>
+				</tr>
+			</table>
+		</p>
+		<h3>
+			&nbsp;</h3>
+		<h3>
+			&lt;syncMark&gt; element</h3>
+		<p>
+			The DSS specification also introduces the concept called <i>SyncMark</i> to let 
+			the endpoints figure out where they had last left while reading the feed. This 
+			is an optional feature and hence an optional element.</p>
+		<p>For example, let's say on Monday you recived updates from DSS feed and got your 
+			local endpoint upto date. Now when you read the feed 4 days later, you want to 
+			figure out after which item in the feed all other updates where already 
+			included in Monday's update so you don't waste your time requesting more pages.
+		</p>
+		<p>
+			The syncMark element is simply a stamp put by publisher. The stamp is an 
+			integer value contained in <i>mark</i> attribute. So each time, subscribers 
+			reads a feed, they note down the <i>mark</i> for that endpoint. And then when 
+			they need next time, they stop processing items when they have found the mark 
+			they had noted last time.
+		</p>
+		<h4>
+			Required attributes</h4>
+		<p>
+			<table ID="Table1">
+				<tr>
+					<td>
+						<strong>Attribute&nbsp;</strong></td>
+					<td>
+						<strong>Description</strong></td>
+					<td>
+						<strong>Example</strong></td>
+				</tr>
+				<tr>
+					<td>
+						endpointGuid</td>
+					<td>
+						Uniquely identifies the endpoint to who this sync mark belongs to.</td>
+					<td>
+						80eee2dc-c29c-41aa-814f-dbb0e79d9062</td>
+				</tr>
+				<tr>
+					<td>
+						mark</td>
+					<td>
+						An integer value that decrements along the feed.</td>
+					<td>
+						3</td>
+				</tr>
+			</table>
+		</p>
+		<h3>
+			&nbsp;</h3>
+		<h3>
+			&lt;related&gt; element</h3>
+		<p>
+			This optional element gives more information about how to retrieve feed items 
+			in pages instead of all at once. It also gives information about how to post 
+			the feed back to publisher. For example,
+		</p>
+		<P>
+			<FONT face="Courier New">
+				<SPAN class="b">&nbsp;</SPAN><FONT size="2">
+					<SPAN class="m">&lt;</SPAN><SPAN class="t">related</SPAN>
+					<SPAN class="t">link</SPAN><SPAN class="m">="</SPAN><B>http://www.DailyCooking.com/dss/feed.ashx?after={0}</B><SPAN class="m">"</SPAN><SPAN class="t"> type</SPAN><SPAN class="m">="</SPAN><B>getData</B><SPAN class="m">"</SPAN><SPAN class="m"> /&gt;</SPAN>
+				</FONT></FONT>&nbsp;
+		</P>
+		<P>
+			The default DSS feed would have included most recently modified 10 items, for 
+			example. Above fragement tells us that to retrieve more feed items simply 
+			access the URL with query parameter called <EM>after</EM> set to the modified 
+			date&nbsp;value of last item in the feed.&nbsp;</P>
+		<p>
+			<FONT face="Courier New"><FONT size="2">
+					<SPAN class="b">&nbsp;</SPAN>
+					<SPAN class="m">&lt;</SPAN><SPAN class="t">related</SPAN>
+					<SPAN class="t">link</SPAN><SPAN class="m">="</SPAN><B>http://www.DailyCooking.com/BlankWebService.asmx</B><SPAN class="m">"</SPAN><SPAN class="t"> type</SPAN><SPAN class="m">="</SPAN><B>putData</B><SPAN class="m">"</SPAN><SPAN class="m"> /&gt;</SPAN>
+				</FONT></FONT><FONT face="Courier New" size="2"></FONT>&nbsp;</p>
+		<P>Above fragement tells us that to post data back to the server use Web Service 
+			entry point.
+		</P>
+		<h4>
+			Required attributes</h4>
+		<p>
+			<table ID="Table2">
+				<tr>
+					<td>
+						<strong>Attribute&nbsp;</strong></td>
+					<td>
+						<strong>Description</strong></td>
+					<td>
+						<strong>Example</strong></td>
+				</tr>
+				<tr>
+					<td>
+						link</td>
+					<td>
+						URI that may be used for the purpose specified by <EM>type</EM> .</td>
+					<td>
+						http://www.DailyCooking.com/dss/feed.ashx?after={0}</td>
+				</tr>
+				<tr>
+					<td>
+						type</td>
+					<td>
+						<P>Currently allows two values getData and putData. The getData specified the URL 
+							that<BR>
+							may be used to access feed in pages. The putData defines the entry point to the 
+							WebService<BR>
+							which must have <A href="http://www.shitalshah.com/dss/BlankServer/BlankWebService.asmx">
+								interface defined here</A>.</P>
+					</td>
+					<td>
+						getData</td>
+				</tr>
+			</table>
+		<p>&nbsp;</p>
+		<h2>
+			Synchronization algorithm</h2>
+		<p>
+			An endpoint may subscribe and publish to other endpoints and recieve data 
+			updates from them and send them their own updates. Following algorithm should 
+			be used by all endpoints to have a globally consistant data:&nbsp;</p>
+		<p>
+			For each &lt;item&gt;, &lt;property&gt; and the &lt;value&gt; element that we 
+			recieved in a feed, we need to look up the local data store and make a decision 
+			whether to keep local value or to keep the value that we received in the 
+			feed.&nbsp;The value we keep is a "winner" and the value that we toss away is 
+			"loser"</p>
+		<p>
+			When we recive an &lt;item&gt; with a guid which does not exist in our local 
+			data store, we simply add it in our data store.
+		</p>
+		<p>
+			When we recive an item that exists in our datastore, we look up each 
+			&lt;property&gt; of the item and varify that we have them. If we do not than we 
+			simply add that property in our data store. Next we look up each value 
+			associated with &lt;property&gt;. If value do not exist in our local data 
+			store, we simply add it. If it does exist then we compare revision, when and by 
+			attribute values in that order and the element which has the highest value of 
+			revision, when or by attributes (in that order of preference), wins.
+		</p>
+		<p>
+			The reference implementation of this algorithm can be found in <a href="http://www.shitalshah.com/dss/code/blank/SyncEngine.cs">
+				SyncEngine class</a>. Please note that this algorithm is designed to be 
+			efficient and request feeds in pages as needed instead of reading potentially 
+			thousands of rows at once. The pagged feed is implemented by a technique called 
+			SyncMark.
+		</p>
+		<P>&nbsp;</P>
+		<h2>
+			Authorship and licensing</h2>
+		<p>This document is authored and currently maintained by <A href="http://www.ShitalShah.com">
+				Shital Shah</A> and released under Creatives Commons Share A Like License.
+		</p>
+	</body>
+</html>

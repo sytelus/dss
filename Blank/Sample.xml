@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!--namespace not included as I haven't decided on it -->
+<dss version="0.9" title="DSS feeds from ShitalShah.com" publisher="rt@yyy.com" signature="uoo778hj">
+	<dataset title="Calender" globalGuid="289000" itemSchema="http://..." 
+	since="Fri, 1 March 2005 09:43:33 GMT" upto="Fri, 1 March 2005 09:43:33 GMT" endpointGuid="7982732">
+		<related link="http://x.com/cloud?since={0}" protocol="url" type="getData" />
+		<related link="http://x.com/processor.asmx" protocol="webService" type="putData" />
+		<related link="http://x.com/{0}" protocol="urlBitTorrent" type="getBlob" />
+		<cut number="2" by="some1@rxample.com" when="Fri, 1 March 2005 09:43:33 GMT"/>
+		<syncMark endpointGuid="34543" mark="250"/>
+		<syncMark endpointGuid="8700" mark="25"/>
+		<item type="event" guid="9890">
+			<property name="c1" currentValueBy="some2@example.com" by="some2@example.com" when="Fri, 1 March 2005 09:43:33 GMT" revision="3">
+				<value deleted="false" by="some2@example.com" when="Fri, 1 March 2005 09:43:33 GMT" revision="3">
+					blah...
+				</value>
+				<value deleted="false" by="some3@example.com" resolvedWhen="Fri, 1 March 2005 09:43:33 GMT" resolvedReason="felt like it" signature="hkl798hjk" blob="false" when="Fri, 2 March 2005 09:43:33 GMT" revision="1">
+					blah2...
+				</value>
+			</property>				
+			<!-- property names $deleted$ and $displayOrder$ are reserved -->
+		</item>
+		<item type="$syncMark$"> 
+			<property name="mark">
+				<value>23</value>
+			</property>
+		</item>
+	</dataset>
+</dss>

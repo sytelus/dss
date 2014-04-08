@@ -1,0 +1,131 @@
+<Configuration>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\RecipeBrowserForm.cs" offset="13478" line="324" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\BlankWebService.cs" offset="943" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\BlankWebService.asmx.cs" offset="0" line="15" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataDocument.cs" offset="10039" line="243" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataAccess.cs" offset="1599" line="-1" column="-1" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DataItemCollection.cs" offset="1371" line="40" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\DictionaryList.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\RecipeEditorForm.cs" offset="9490" line="78" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\App.config" offset="94" line="0" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\feed.aspx.cs" offset="869" line="24" column="36" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\Common.cs" offset="226" line="1" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\Blank\FeedWriter.cs" offset="1351" line="1" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\ReceipeBook\AssemblyInfo.cs" offset="0" line="-1" column="-1" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\Global.asax.cs" offset="160" line="-1" column="-1" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\Web.config" offset="0" line="71" column="0" />
+      <TrackedFile location="C:\shital\Visual Studio Projects\Astrila.Blank\BlankServer\AssemblyInfo.cs" offset="0" line="33" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView.ListViewItemCollection">
+      <Item value="Add" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
+      <Item value="SubItems" priority="0" />
+      <Item value="Tag" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem.ListViewSubItemCollection">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="SelectedItems" priority="0" />
+      <Item value="Clear" priority="0" />
+      <Item value="Items" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:int">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItem">
+      <Item value="Properties" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView.SelectedListViewItemCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToBoolean" priority="0" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataDocumentCollection">
+      <Item value="Add" priority="0" />
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataDocument">
+      <Item value="Load" priority="0" />
+      <Item value="Save" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="Write" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="ReadToEnd" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.StatusBarPanel">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System">
+      <Item value="Convert" priority="0" />
+      <Item value="Web" priority="1" />
+      <Item value="Globalization" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Globalization.CultureInfo">
+      <Item value="InvariantCulture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Form.DialogResult">
+      <Item value="OK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Astrila">
+      <Item value="Blank" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="Write" priority="0" />
+      <Item value="AddFileDependency" priority="0" />
+      <Item value="Cache" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpCachePolicy">
+      <Item value="SetLastModifiedFromFileDependencies" priority="0" />
+      <Item value="SetETagFromFileDependencies" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.XmlDocument">
+      <Item value="LoadXml" priority="0" />
+      <Item value="OuterXml" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="QueryString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolBarButtonClickEventArgs">
+      <Item value="Button" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="checkBoxVegiterian" priority="0" />
+      <Item value="Properties" priority="0" />
+      <Item value="Items" priority="1" />
+      <Item value="ShowDialog" priority="0" />
+      <Item value="textBoxTitle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Astrila.Blank.DataItemCollection">
+      <Item value="Add" priority="1" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="OK" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

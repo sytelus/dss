@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--namespace not included as I haven't decided on it -->
+<subscriptions version="0.9">
+  <!--
+  <subscription url="http://www.shitalshah.com/dss/BlankServer/feed.ashx" when="2005-12-05T03:36:06.2187500-08:00" title="Recipes from ShitalShah.com" getDataUrl="http://www.ShitalShah.com/dss/BlankServer/feed.ashx?after={0}" putDataUrl="http://www.ShitalShah.com/dss/BlankServer/BlankWebService.asmx" twoWay="true" />
+  -->
+</subscriptions>

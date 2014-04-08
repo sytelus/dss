@@ -1,0 +1,1 @@
+<% @WebHandler language="c#" class="Astrila.Blank.BlankServer.Feed" codebehind="Feed.cs" %>
